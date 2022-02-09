@@ -1,0 +1,23 @@
+{
+  "name": "a02-mayteeakk",
+  "version": "1.0.0",
+  "description": "This is a simple package that emulates coin flips in serveral different ways.",
+  "main": "flip.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "flip": "node flip.js",
+    "flips": "node flips.js",
+    "guess-flip": "node guess-flip.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2022-spring/a02-MayteeAkk.git"
+  },
+  "author": "Maytee Akkaramongkolrojn",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2022-spring/a02-MayteeAkk/issues"
+  },
+  "homepage": "https://github.com/comp426-2022-spring/a02-MayteeAkk#readme",
+  "type": "module"
+}

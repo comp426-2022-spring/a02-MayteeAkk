@@ -1,16 +1,10 @@
-import { coinFlips, countFlips } from "./modules/coin.mjs";
-import { createRequire } from 'module';
+import {coinFlips, countFlips} from "./modules/coin.mjs";
+import minimist from "minimist";
 
-const require = createRequire(import.meta.url)
-const args = require('minimist')(process.argv.slice(2))
-const number = args['number']
+const argv = (minimist)(process.argv.slice(2));
+argv['number'];
+const flips = argv.number || 1;
 
-if (number === undefined) {
-    coinsArray = coinFlips(1)
-} else {
-    var coinsArray = coinFlips(number)
-}
-var coinsSummary = countFlips(coinsArray)
-
-console.log(coinsArray)
-console.log(coinsSummary)
+var flips_arr = coinFlips(flips);
+console.log(flips_arr);
+console.log(countFlips(flips_arr));

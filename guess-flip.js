@@ -7,7 +7,7 @@ let require = createRequire(import.meta.url);
 try{
     let myArgs = minimist(process.argv.slice(2));
     let call = myArgs["call"];
-    if (!call || (call != "heads" && call != "tails")){
+    if (call == null || (call != "heads" && call != "tails")){
         throw err;
     }
     console.log(flipACoin(call));

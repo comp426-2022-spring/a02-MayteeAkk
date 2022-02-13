@@ -96,9 +96,18 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  let flip = coinFlip();
-  let result = flip === call ? 'win' : 'lose';
-  return { "call": call, "flip": flip, "result": result };
+  let statement = {
+    call,
+    flip: coinFlip(),
+    result: "",
+  };
+  if (statement.call === statement.flip) {
+    statement.result = "win";
+  } else {
+    statement.result = "lose";
+  }
+  
+  return statement;
 }
 
 

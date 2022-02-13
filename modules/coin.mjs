@@ -60,28 +60,25 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-  let heads = 0;
-  let tails = 0;
-  let returnVal;
-  for (let result of array) {
-    if (result === 'heads') {
-      heads++;
+  var count;
+  var heads = 0;
+  var tails = 0;
+  var i = 0;
+  for (let i=0; i < array.length; i++) {
+    if (array[i] === "tails") {
+      tails += 1;
     } else {
-      tails++;
+      heads += 1;
     }
   }
-
-  if(heads == 0){
-    returnVal = { tails };
+  if (heads == 0) {
+    count = { tails };
+  } else if (tails == 0) {
+    count = { heads };
+  } else {
+    count = { tails, heads };
   }
-  else if(tails == 0){
-    returnVal = { heads };
-  }
-  else{
-    returnVal = { tails, heads };
-  }
-
-  return returnVal;
+  return count;
 }
 
 /** Flip a coin!
@@ -106,7 +103,7 @@ function flipACoin(call) {
   } else {
     statement.result = "lose";
   }
-  
+
   return statement;
 }
 

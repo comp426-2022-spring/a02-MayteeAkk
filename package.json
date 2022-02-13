@@ -1,5 +1,5 @@
 {
-  "name": "a02-mayteeakk",
+  "name": "coinflip",
   "version": "1.0.0",
   "description": "This is a simple package that emulates coin flips in serveral different ways.",
   "main": "flip.js",
